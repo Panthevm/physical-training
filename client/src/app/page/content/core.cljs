@@ -18,7 +18,7 @@
               [:a.cursor-pointer.hover:text-blue-700 chapter (:title chapter)]
               [:ul.list-disc.text-xl.pl-10
                (map-indexed
-                (fn [index part]
+                (fn [index-li part] ^{:key index-li}
                   [:li [:a.hover:text-red-700.cursor-pointer.hover:text-blue-700 part (:title part)]])
                 (:parts chapter))]])
 
