@@ -19,11 +19,13 @@
  ::data
  :<- [::routing/current-route]
  (fn [current-route _]
-   (let [page-number (-> current-route :params :page parse-integer)]
+   (let [page-number (if-let [page (-> current-route :params :page)]
+                       (parse-integer page)
+                       0)]
      {:page page-number
 
       :previous-page
-      (when-not (= 1 page-number)
+      (when-not (= 0 page-number)
         (str "#/book/" (dec page-number)))
 
       :next-page

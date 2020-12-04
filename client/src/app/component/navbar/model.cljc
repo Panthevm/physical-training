@@ -8,7 +8,7 @@
   [links current-route]
   (let [location-hash (-> current-route :params :location-hash)]
     (if (string/blank? location-hash)
-      (assoc-in links [0 :class] "bg-gray-900")
+      (assoc-in links [1 :class] "bg-gray-900")
       (->> links
            (map (fn [link]
                   (cond-> link
@@ -17,7 +17,7 @@
 
 (def links
   [{:title "Оглавление" :href "#/content"}
-   {:title "Учебник"    :href "#/book/1"}
+   {:title "Учебник"    :href "#/book"}
    {:title "Тест"       :href "https://panthevm.github.io/physical-training-test/"}])
 
 (rf/reg-sub
