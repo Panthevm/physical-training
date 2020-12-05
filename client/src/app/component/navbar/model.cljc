@@ -18,7 +18,7 @@
 (def links
   [{:title "Оглавление" :href "#/content"}
    {:title "Учебник"    :href "#/book"}
-   {:title "Тест"       :href "https://panthevm.github.io/physical-training-test/"}])
+   {:title "Тест"       :href "test/index.html"}])
 
 (rf/reg-sub
  ::data
