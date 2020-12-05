@@ -18,7 +18,7 @@
 (def links
   [{:title "Оглавление" :href "#/content"}
    {:title "Учебник"    :href "#/book"}
-   {:title "Тест"       :href "test/index.html"}])
+   {:title "Тест"       :href "ttest/index.html"}])
 
 (rf/reg-sub
  ::data
